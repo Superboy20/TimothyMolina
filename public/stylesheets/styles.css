@@ -1,35 +1,39 @@
 body {
-    background-color: #0a192f;
+    /* background-color: #0a192f; */
     color: white;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+    overflow: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-#about, #experience, #projects, #contact {
+#about,
+#experience,
+#projects,
+#contact {
     cursor: pointer;
 }
 
 ::-webkit-scrollbar {
-    width: 12px;
-    /* background-color: white; */
+    width: 5px;
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
 }
- 
-::-webkit-scrollbar-track {
-    border-radius: 10px;
-}
- 
+
 ::-webkit-scrollbar-thumb {
     border-radius: 0px;
-    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.2); 
-    background-color: #112241;
-    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.2);
+    background-color: #1b273571;
+    border-radius: 5px;
 }
 
 .scrolled-down {
-    transform:translateY(-100%); 
+    transform: translateY(-100%);
     transition: all 0.3s ease-in-out;
 }
 
 .scrolled-up {
-    transform:translateY(0); 
+    transform: translateY(0);
     transition: all 0.3s ease-in-out;
 }
 
@@ -62,7 +66,7 @@ body {
 .ulNav::after {
     content: '';
     display: block;
-    width: 0;  
+    width: 0;
     height: 2px;
     background: white;
     transition: width .3s;
@@ -78,8 +82,9 @@ body {
 }
 
 .header-h1 {
-    font-size: clamp(0.4rem, 4vw, 1.8rem);
-    margin-left: 1.3rem;
+    display: flex;
+    font-size: clamp(5rem, 4vw, 1.8rem);
+    justify-content: center;
 }
 
 .header-h1-2 {
@@ -87,12 +92,13 @@ body {
     margin-left: 8rem;
     margin-right: 8rem;
 }
+
 .header-h1-2::after {
     margin-top: 1.8rem;
     content: '';
     width: 100%;
     height: 3px;
-    background-color: #A8B2D1;
+    background-color: white;
     display: block;
 }
 
@@ -108,27 +114,94 @@ body {
     content: '';
     width: 100%;
     height: 3px;
-    background-color: #1E3C71;
+    background-color: white;
     display: block;
 }
 
 .header-h2 {
     margin-top: 2rem !important;
-    font-size: clamp(50px, 8vw, 80px);
-    margin-left: 8rem;
+    display: flex;
+    font-size: clamp(3.2rem, 4vw, 1.8rem);
+    justify-content: center;
 }
 
-.p-header {
-    margin-top: 2rem !important;
-    font-size: clamp(0.4rem, 3.5vw, 1.2rem);
-    margin-left: 16rem !important;
+.p--header {
+    display: flex;
+    font-size: clamp(2rem, 3.5vw, 1.2rem);
+    font-weight: 600;
     white-space: initial !important;
+    justify-content: center;
+    width: 100%;
+    margin-top: 65px;
+    padding: 0 150px 0 150px;
 }
 
 .p-header2 {
-    margin-top: 2rem !important;
+    margin-top: .5rem !important;
     font-size: 20px;
     display: block;
+}
+
+.firstPara {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 12%;
+}
+
+.secondPara {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skillBoxes {
+    display: grid;
+    grid-template-columns: repeat(2, 325px);
+    justify-content: space-between;
+    padding-top: 35px;
+    width: 100%;
+}
+
+.left--full {
+    position: relative;
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+    border: solid white 1px;
+}
+
+.right--full {
+    position: relative;
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+    border: solid white 1px;
+}
+
+.card--skills {
+    position: relative;
+    padding: 10px 20px;
+    font-size: 30px;
+
+}
+
+.card--skills::after {
+    margin-top: .7rem;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    display: block;
+}
+
+.ul--list--skills {
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+    padding: 0 0 10px 0;
+}
+
+.list--skills {
+    margin: 0 !important;
 }
 
 li {
@@ -139,7 +212,7 @@ li {
 
 .mainDiv {
     padding-left: 1rem;
-    margin-top: 25rem !important;
+    margin-top: 20rem !important;
 }
 
 .cardDiv {
@@ -152,13 +225,15 @@ li {
     position: relative;
     padding: 10px 20px;
     color: white !important;
-    background: #0E2343;
+    background: radial-gradient(ellipse at bottom, #272a2e 0%, #090A0F 100%);
     font-size: 28px;
     border-top-right-radius: 100px;
     border-bottom-left-radius: 100px;
     transition: all 1s;
-  }
-  .cardDiv:after, .cardDiv:before {
+}
+
+.cardDiv:after,
+.cardDiv:before {
     pointer-events: all;
     content: " ";
     width: 100px;
@@ -167,28 +242,37 @@ li {
     border: 0px solid #fff;
     transition: all 1s;
     z-index: -1;
-  }
-  .cardDiv:after {
+}
+
+.cardDiv:after {
     top: -4px;
     left: -4px;
     border-top: 20px solid white !important;
     border-left: 20px solid white !important;
-  }
-  .cardDiv:before {
+}
+
+.cardDiv:before {
     bottom: -4px;
     right: -4px;
     border-bottom: 20px solid white !important;
     border-right: 20px solid white !important;
-  }
-  .cardDiv:hover {
+}
+
+.cardDiv:hover {
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
-  }
-  .cardDiv:hover:before, .cardDiv:hover:after {
-    width: 100.7%;
-    height: 100%;
-  }  
-  
+}
+
+.cardDiv:hover:before,
+.cardDiv:hover:after {
+    width: 100.6%;
+    height: 100.5%;
+}
+
+.cDiv {
+    padding-top: 2rem !important;
+}
+
 .nav-link {
     font-size: 1.2rem !important;
 }
@@ -199,7 +283,8 @@ a {
     color: white !important;
 }
 
-a:hover, :after {
+a:hover,
+:after {
     font-size: 1.5rem;
     text-decoration: none !important;
     color: white !important;
@@ -215,35 +300,42 @@ a:hover, :after {
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
     transition: all 1s;
-  }
-  .btn:after, .btn:before {
+}
+
+.btn:after,
+.btn:before {
     content: " ";
     width: 10px;
     height: 10px;
     position: absolute;
     border: 0px solid #fff;
     transition: all 1s;
-  }
-  .btn:after {
+}
+
+.btn:after {
     top: -1px;
     left: -1px;
     border-top: 5px solid black;
     border-left: 5px solid black;
-  }
-  .btn:before {
+}
+
+.btn:before {
     bottom: -1px;
     right: -1px;
     border-bottom: 5px solid black;
     border-right: 5px solid black;
-  }
-  .btn:hover {
+}
+
+.btn:hover {
     border-top-right-radius: 0px;
     border-bottom-left-radius: 0px;
-  }
-  .btn:hover:before, .btn:hover:after {
+}
+
+.btn:hover:before,
+.btn:hover:after {
     width: 100%;
     height: 100%;
-  }       
+}
 
 .eBtn {
     padding-left: 3.6rem !important;
@@ -273,7 +365,11 @@ a:hover, :after {
     padding: 20px 40px 20px 40px;
     margin-top: 10px;
     font-weight: 700;
-    
+
+}
+
+.link--color {
+    color: black !important;
 }
 
 .footerDiv {
@@ -289,12 +385,13 @@ a:hover, :after {
     .p-header2 {
         max-width: 710px;
     }
+
     .p-header3 {
         max-width: 800px;
     }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
     .ulNav {
         margin-right: 2.5rem !important;
     }
@@ -304,17 +401,22 @@ a:hover, :after {
     }
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
 
     .focusImg {
         min-width: 222px;
         border-radius: 3%;
-    border: white solid 3px;
-        
+        border: white solid 3px;
+
     }
 
     .wrapper {
         display: none !important;
+    }
+
+    .skillBoxes {
+        display: inherit;
+
     }
 
     .p-header2 {
@@ -340,7 +442,7 @@ a:hover, :after {
         margin-left: 7rem;
         margin-right: 7rem;
     }
-    
+
     .liner::after {
         margin-top: 1.8rem;
         content: '';
@@ -353,7 +455,7 @@ a:hover, :after {
 }
 
 @media screen and (max-width: 376px) {
-    
+
     .wrapper {
         display: block;
         position: relative;
@@ -382,20 +484,43 @@ a:hover, :after {
     }
 
     .mainDiv {
-        margin-top: 3rem !important;
+        display: flexbox;
+    }
+
+    .cardDiv {
+        margin-top: 10rem !important;
+
     }
 
     .header-h1 {
-        font-size: 1.7rem !important;
+        font-size: 2.5rem !important;
         margin-top: 2rem;
-        margin-left: 4.6rem !important;
+    }
+
+    .header-h2 {
+        font-size: 1.5rem !important;
+        margin-top: 2rem;
+    }
+
+    .p--header {
+        display: flex;
+        font-size: 1.3rem !important;
+        white-space: initial !important;
+        justify-content: center;
+        width: 100%;
+        margin-top: 50px;
+        padding: 0 20px 0 20px;
+    }
+
+    .p-header2 {
+        margin-top: 2rem !important;
+        font-size: 1.3rem;
     }
 
     .header-h1-2 {
-        font-size: 2rem;
-        margin-left: 4rem !important;
-        margin-right: 1.9rem;
+        display: inherit;
     }
+
     .header-h1-2::after {
         margin-top: 1.8rem;
         content: '';
@@ -410,7 +535,7 @@ a:hover, :after {
         margin-left: 8rem;
         margin-right: 8rem;
     }
-    
+
     .liner::after {
         margin-top: 1.8rem;
         content: '';
@@ -420,20 +545,7 @@ a:hover, :after {
         display: block;
     }
 
-    .header-h2 {
-        font-size: 4rem;
-        margin-left: 4.6rem !important;
-    }
-    
-    .p-header {
-        font-size: 1.3rem !important;
-        margin-left: .8rem !important;
-        text-align: start !important;
-    }
-    .p-header2 {
-        margin-top: 2rem !important;
-        font-size: 1.3rem;
-    }
+
 }
 
 @media screen and (max-width: 450px) {
@@ -459,7 +571,7 @@ a:hover, :after {
         margin-bottom: 5rem;
         border-radius: 3%;
         border: white solid 3px;
-        
+
     }
 
 }
@@ -467,21 +579,30 @@ a:hover, :after {
 @media screen and (max-width: 992px) {
 
     .header-h1 {
-        font-size: clamp(0.4rem, 8vw, 1.8rem);
-        margin-left: 8rem;
+        font-size: clamp(3rem, 8vw, 1.8rem);
     }
 
     .header-h2 {
         margin-top: 2rem !important;
-        font-size: clamp(50px, 8vw, 80px);
-        margin-left: 3rem;
+        font-size: clamp(2rem, 8vw, 1.8rem);
     }
-    
-    .p-header {
-        margin-top: 2rem !important;
-        font-size: clamp(0.4rem, 4vw, 1.2rem);
-        margin-left: 1rem !important;
+
+    .p--header {
+        display: flex;
+        font-size: clamp(1rem, 3.4vw, 1.2rem);
         white-space: initial !important;
+        justify-content: center;
+        width: 100%;
+        margin-top: 50px;
+        padding: 0 20px 0 20px;
+    }
+
+    .wrapper {
+        display: flex;
+        height: 100%;
+        margin: auto;
+        align-items: center;
+        padding-left: 40px !important;
     }
 }
 
@@ -491,4 +612,130 @@ a:hover, :after {
         margin-right: auto;
         margin-left: auto;
     }
+
+
+}
+
+.area {
+    /* background: #4e54c8;
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8); */
+    width: 100%;
+    height: 100vh;
+
+
+}
+
+.circles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.5);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+
+}
+
+.circles li:nth-child(1) {
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2) {
+    left: 10%;
+    width: 40px;
+    height: 40px;
+    animation-delay: 2s;
+    animation-duration: 5s;
+}
+
+.circles li:nth-child(3) {
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 7s;
+}
+
+.circles li:nth-child(5) {
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+    left: 20%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
 }
