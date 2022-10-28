@@ -1,4 +1,5 @@
 const about = document.getElementById('about')
+const skills = document.getElementById('skills')
 const experience = document.getElementById('experience');
 const projects = document.getElementById('projects');
 const contact = document.getElementById('contact');
@@ -7,11 +8,13 @@ const firstItem = document.getElementById('firstItem');
 const secondItem = document.getElementById('secondItem');
 const thirdItem = document.getElementById('thirdItem');
 const fourthItem = document.getElementById('fourthItem');
+const fifthItem = document.getElementById('fifthItem');
 
 about.addEventListener("click", navigateFirst, false);
-experience.addEventListener("click", navigateSecond, false);
-projects.addEventListener("click", navigateThird, false);
-contact.addEventListener("click", navigateFourth, false);
+skills.addEventListener("click", navigateSecond, false);
+experience.addEventListener("click", navigateThird, false);
+projects.addEventListener("click", navigateFourth, false);
+contact.addEventListener("click", navigateFifth, false);
 
 function navigateFirst(e) {
     firstItem.scrollIntoView({
@@ -36,6 +39,13 @@ function navigateThird(e) {
 };
 function navigateFourth(e) {
     fourthItem.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "center"
+    });
+};
+function navigateFifth(e) {
+    fifthItem.scrollIntoView({
         behavior: "smooth",
         block: "center",
         inline: "center"
